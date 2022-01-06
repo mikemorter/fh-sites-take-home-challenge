@@ -1,8 +1,11 @@
 class PokerHand {
   constructor(cards) {
-      // Is hand submitted is a string
+      // Is hand submitted a string then split individual values
       this.cardsArray = typeof cards === 'string' ? cards.split(" ") : null;
+      console.log(this.cardsArray);
   }
+
+  // Get card values
   
   getCardValues(cards, prop){
       let cardValues = cards.map((card)=>{
@@ -17,6 +20,8 @@ class PokerHand {
     });
     return cardValues;
   }
+
+// Get occurnce of each card
 
   cardOccurrence(values){
     let a = [], b = [], prev;
@@ -33,6 +38,8 @@ class PokerHand {
     return [a, b];
   }
 
+// Implement way to find flush
+
   flush(){
     let suits = this.getCardValues(this.cardsArray, 'suits');
     let filteredSuits = suits.filter(function(item, pos) {
@@ -42,12 +49,16 @@ class PokerHand {
     return filteredSuits.length === 1 ? true : false;
   }
 
+// Implement way to find straight
+
   straight(arr){
     function isOneGreater(element, index, arr){
       return index === arr.length - 1 || parseInt(element, 10) + 1  === parseInt(arr[index + 1], 10);
     }
     return arr.every(isOneGreater);
   }
+
+// Ranks
 
   getRank() {
     // result if none of other ranks are met
