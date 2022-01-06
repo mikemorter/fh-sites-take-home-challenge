@@ -1,8 +1,6 @@
 class PokerHand {
   constructor(cards) {
-      //Confirm that hand submitted is a string.
-      //Store cards in array to check number and 
-      //suit individually.
+      // Is hand submitted is a string
       this.cardsArray = typeof cards === 'string' ? cards.split(" ") : null;
   }
   

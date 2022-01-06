@@ -93,7 +93,7 @@ describe('Rank High Card', function() {
   })
 })
 
-// test Short Input Hand
+// test Short Hand
 
 describe('Short Input Hand', function() {
   it('Return not a valid hand when short hand given', function() {
@@ -102,7 +102,7 @@ describe('Short Input Hand', function() {
   })
 })
 
-// test Long Input Hand
+// test Long Hand
 
 describe('Long Input Hand', function() {
   it('Return not a valid hand when long hand given', function() {

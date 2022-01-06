@@ -36,3 +36,4 @@ It should handle the following hand ranks:
 * One Pair
 * High Card
 
+# pokerHand
