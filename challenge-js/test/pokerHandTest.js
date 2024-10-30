@@ -93,6 +93,15 @@ describe("Rank Straight", function () {
   });
 });
 
+// test Straight with Ace Low Card
+
+describe("Rank Straight", function () {
+  it("Return a straight when hand that includes more face cards given", function () {
+    var hand = new PokerHand("4d 3c 5s Ad 2h");
+    assert.equal(hand.getRank(), "Straight");
+  });
+});
+
 // test Straight Flush
 
 describe("Rank Straight Flush", function () {
